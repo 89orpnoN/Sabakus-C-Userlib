@@ -17,13 +17,13 @@ struct IntArr IntArrContructor(){
     struct IntArr item;
     item.Len = 0;
     item.Tlen = 100;
-    item.Arr = calloc(item.Tlen,sizeof( (int)3 ) );
+    item.Arr = calloc(item.Tlen,sizeof( int );
     return item;
 };
 
 int ExpandIntArr(struct IntArr arr){
     arr.Tlen*=2;
-    arr.Arr = realloc(arr.Arr,sizeof((int)3)*arr.Tlen);
+    arr.Arr = realloc(arr.Arr,sizeof(int)*arr.Tlen);
     if (arr.Arr == NULL) return 0;
     return 1;
 };
