@@ -16,13 +16,13 @@ struct CharArr CharArrContructor(){
     struct CharArr item;
     item.Len = 0;
     item.Tlen = 100;
-    item.Arr = calloc(item.Tlen,sizeof( (char)3 ) );
+    item.Arr = calloc(item.Tlen,sizeof( char ) );
     return item;
 };
 
 int ExpandCharArr(struct CharArr arr){
     arr.Tlen*=2;
-    arr.Arr = realloc(arr.Arr,sizeof((char)3)*arr.Tlen);
+    arr.Arr = realloc(arr.Arr,sizeof(char)*arr.Tlen);
     if (arr.Arr == NULL) return 0;
     return 1;
 };
