@@ -16,13 +16,13 @@ struct FloatArr FloatArrContructor(){
     struct FloatArr item;
     item.Len = 0;
     item.Tlen = 100;
-    item.Arr = calloc(item.Tlen,sizeof( (float)3 ) );
+    item.Arr = calloc(item.Tlen,sizeof( float ) );
     return item;
 };
 
 int ExpandFloatArr(struct FloatArr arr){
     arr.Tlen*=2;
-    arr.Arr = realloc(arr.Arr,sizeof((float)3)*arr.Tlen);
+    arr.Arr = realloc(arr.Arr,sizeof(float)*arr.Tlen);
     if (arr.Arr == NULL) return 0;
     return 1;
 };
